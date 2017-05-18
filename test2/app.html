@@ -1,0 +1,143 @@
+<html ng-app="bank">
+<head>
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="./vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./vendor/font-awesome/css/font-awesome.min.css">
+	<script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="../bower_components/angular-localization/angular-localization.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript">
+	</script>
+	<style type="text/css">
+body{padding: 0px;margin: 0px;}
+.buttonContainer{padding: 10px 20px;}
+.buttonContainer button{min-height: 40px}
+.clearfix{clear: both;}
+.widthnew{width: 800px}
+.btn{border-color: #3fb921}
+	</style>
+</head>
+<div class="test02">
+	<div class="ngdialog ngdialog-theme-default col-xs-12 col-sm-8 col-md-6 col-lg-6">
+
+		<div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
+
+	    <form class="future-banking" role="transfer money form">
+			
+			<section class="container-fluid header">
+		    	<div class="row">
+		    		<div class="col-xs-12 col-sm-12 col-md-6">
+		        		<i class="fa fa-credit-card fa-2x"></i>
+		        		<p class="title">Send Transfer</p>
+		        	</div>
+		        	<div class="col-xs-12 col-sm-12 col-md-6">
+		        		<div class="btn-group" role="group">
+			        		<button class="btn btn-default">
+			        			<img class="profile-img" alt="Sender picture - John Smith" title="John Smith">
+			        			<span id="user-name">John Smith</span>
+			        		</button>
+			        		<button class="btn btn-default" role="sign out user" title="click to sign out">
+			        			Sign out
+								<i class="fa fa-sign-out fa-lg"></i>
+			        		</button>
+		        		</div>
+		        	</div>
+		        </div>
+		        <div class="row">
+		        	<div class="col-xs-12">
+		        		<hr/>
+		        	</div>
+		        </div>
+	        </section>
+
+	        <section class="container-fluid" id="account-info">
+				<div class="col-xs-12">
+			        <div class="row">
+			        	<div class="col-xs-12">
+			
+			        		<h4>From</h4>
+			        		
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6">Account Name:</div>
+			        			<div class="col-xs-6">Checking</div>
+			        		</div>
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6">Account Number:</div>
+			        			<div class="col-xs-6">123456789</div>
+			        		</div>
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6">Current Balance:</div>
+			        			<div class="col-xs-6">{{5000 | currency }}</div>
+			        		</div>
+
+			        		<hr/>
+
+			        	</div>
+			        </div>
+		        </div>
+	        </section>
+
+	        <section class="container-fluid" id="transfer-details">
+				<div class="col-xs-12">
+			        <div class="row">
+			        	<div class="col-xs-12">
+
+			        		<h4>Transfer details</h4>
+			        		
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6">
+			        				<label id="transfer-amount" for="amount">Amount to transfer:</label>
+			        			</div>
+			        			<div class="col-xs-6">
+				        			<input class="form-control" id="amount" type="text" value="{{300 | currency}}">
+			        			</div>
+			        		</div>
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6">
+			        				<label id="transfer-frequency" for="frequency">Frequency:</label>
+			        			</div>
+			        			<div class="col-xs-6">
+			        				<select class="form-control" id="frequency">
+									  <option>Every day</option>
+									  <option>Weekly</option>
+									  <option>Bi-weekly</option>
+									  <option>Monthly</option>
+									</select>
+			        			</div>
+			        		</div>
+
+			        		<hr/>
+
+			        	</div>
+			        </div>
+		        </div>
+	        </section>
+
+	        <section class="container-fluid" id="send-to-recipient">
+				<div class="col-xs-12">
+			        <div class="row">
+			        	<div class="col-xs-12">
+			        		<h4>Send to</h4>
+			        		
+			        		<div class="row ">
+			        			<div class="col-xs-8">
+			        				<img class="profile-img" alt="Recipient picture - Jane Smith" title="Jane Smith">
+			        				<h3 id="recipient">Jane Smith</h3>
+			        			</div>
+			        			<div class="col-xs-4">
+				        			<a href="" class="change-user-link" title="Change recipient" role="change recipient link">Change recipient</a>
+			        			</div>
+			        		</div>
+
+			        		<hr/>
+
+							<button type="button" class="btn btn-primary btn-send" ng-click="addAlert()" role="alert for transfer money" title="">Send {{300 | currency}}</button>
+
+			        	</div>
+			        </div>
+		        </div>
+	        </section>
+	    </form>
+	</div>
+</div>

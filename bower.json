@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "description": "demo web site",
+  "main": "index.html",
+  "keywords": [
+    "demo",
+    "web",
+    "site"
+  ],
+  "authors": [
+    "hitesh"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "^3.2.1",
+    "angular": "^1.6.4",
+    "angular-localization": "^1.2.1"
+  }
+}

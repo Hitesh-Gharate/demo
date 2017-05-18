@@ -1,0 +1,32 @@
+<html ng-app="bank">
+<head>
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="../bower_components/angular-localization/angular-localization.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript">
+	</script>
+	<style type="text/css">
+body{padding: 0px;margin: 0px;}
+.buttonContainer{padding: 10px 20px;}
+.buttonContainer button{min-height: 40px}
+.clearfix{clear: both;}
+.widthnew{width: 800px}
+.btn{border-color: #3fb921}
+	</style>
+</head>
+<body ng-controller="bankController">
+	<section>
+		<div class="container text-center">
+		  <h2 class="title">Book an Appointment</h2>
+		  	<h3>Our Investing Topics</h3><br/>
+		  	<p>pick a topic, then we will find time and date {{dataResponse.length}}</p>
+		  	<div class="row">
+		  		<button-dir></button-dir>	
+		  	</div>
+		</div>
+	</section>
+</body>
+</html>

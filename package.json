@@ -1,0 +1,29 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "server.js"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "hitesh",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hitesh-Gharate/bower_project.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13"
+  },
+  "bugs": {
+    "url": "https://github.com/Hitesh-Gharate/bower_project/issues"
+  },
+  "homepage": "https://github.com/Hitesh-Gharate/bower_project#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}
